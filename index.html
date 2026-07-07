@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- https://emojidb.org/book-emojis 📚📙📜📓 -->
+<title>📜 Dooley (Hangman)</title>
+<style>
+  body {
+    background: #222;
+    color: #eee;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  #controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  select, button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  #word {
+    font-size: 32px;
+    letter-spacing: 8px;
+    margin: 20px 0;
+  }
+  #letters button {
+    margin: 3px;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+  #hangman {
+    white-space: pre;
+    font-family: monospace;
+    margin-top: 20px;
+  }
+  #definition {
+    margin-top: 20px;
+    max-width: 600px;
+    text-align: left;
+    background: #333;
+    padding: 15px;
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div id="controls">
+  <label>API:
+    <select id="apiSelect"></select>
+  </label>
+  <button id="newBtn">New Word</button>
+</div>
+
+<div id="hangman"></div>
+<div id="word"></div>
+<div id="letters"></div>
+<div id="definition"></div>
+<p>Not sure about limits, last check all these worked.</p>
+<script src="pipelines.js"></script>
+<script src="hangman.js"></script>
+</body>
+</html>
